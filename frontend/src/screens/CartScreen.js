@@ -9,9 +9,7 @@ import {
   Card,
   Button,
   Form,
-  NavItem,
 } from "react-bootstrap";
-import Rating from "../components/Rating";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { addToCart, removeFromCart } from "../actions/cartActions";
