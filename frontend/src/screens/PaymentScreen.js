@@ -4,6 +4,7 @@ import { Button, Form, Col } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
 import CheckoutSteps from "../components/CheckoutSteps.js";
 import { savePaymentMethod } from "../actions/cartActions";
+import Meta from "../components/Meta";
 
 const PaymentScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
@@ -24,6 +25,7 @@ const PaymentScreen = ({ history }) => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 step3 />
+      <Meta title="Your Payment Method" />
       <h1>Payment Method</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group>
