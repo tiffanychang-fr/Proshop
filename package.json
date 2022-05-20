@@ -10,10 +10,14 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d"
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM-CONFIG-PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Yun-Hsuan Chang",
   "license": "MIT",
+  "engine": {
+    "node": "v14.16.0"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
